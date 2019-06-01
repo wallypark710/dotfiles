@@ -1,3 +1,5 @@
+# Setting
+
 {
 	"color_scheme": "Packages/Color Scheme - Default/Mariana.sublime-color-scheme",
 	"detect_indentation": false,
@@ -10,4 +12,59 @@
 	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": true
 }
+
+# KeyBindings
+
+ [
+  {"keys": ["tab"], "command": "expand_abbreviation_by_tab", "context":
+    [
+      { "operand": "source.js", "operator": "equal", "match_all": true, "key": "selector" },
+      { "match_all": true, "key": "selection_empty" },
+      { "operator": "equal", "operand": false, "match_all": true, "key": "has_next_field" },
+      { "operand": false, "operator": "equal", "match_all": true, "key": "auto_complete_visible" },
+      { "match_all": true, "key": "is_abbreviation" }
+    ]
+  },
+  { "keys": ["super+`"], "command": "js_prettier" },
+  { "keys": ["super+e"], "command": "toggle_side_bar" },
+]
+
+############### PACKAGE #####################
+
+# JsPrettier
+
+{
+  "auto_format_on_save": true,
+  "prettier_cli_path": "/Users/walli/.nvm/versions/node/v8.12.0/bin/prettier",
+  "node_path": "/Users/walli/.nvm/versions/node/v8.12.0/bin/node",
+  "prettier_options": {
+    "extensions": ["js", "jsx"],
+
+    "semi": true,
+    // Fit code within this line limit
+    "printWidth": 80,
+
+    // Number of spaces it should use per tab
+    "tabWidth": 2,
+
+    "useTabs": false,
+
+    "arrowParens": "avoid",
+
+    "useFlowParser": false,
+
+    "singleQuote": true,
+
+    "jsxSingleQuote": true,
+
+    "trailingComma": "all",
+
+    "bracketSpacing": true,
+
+    "jsxBracketSameLine": false,
+
+    "configLocations": ["${home_path}/.prettierrc", "${folder}/.prettierrc"]
+  },
+}
+
 

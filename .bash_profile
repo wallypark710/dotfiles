@@ -15,6 +15,8 @@ alias sublime='function _new(){ touch $1; open -a /Applications/Sublime\ Text.ap
 alias typo='function _new(){ touch $1; open -a /Applications/Typora.app $1; }; _new'
 export PATH=/usr/local/bin:$PATH
 
+alias git=hub
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
